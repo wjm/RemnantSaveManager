@@ -27,12 +27,6 @@ jobs:
      
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v1.0.3
-       
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
-     
-    - name: Restore NuGet Packages
-      run: nuget restore RemnantSaveManager.sln
  
     - name: Build and Publish Web App
       run: msbuild RemnantSaveManager.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=RemnantSaveManager
